@@ -1,0 +1,11 @@
+
+
+$navbar-height:               62px;
+$navbar-border-radius:        0px;
+//$navbar-inverse-color:      #
+$dark-blue:                   #1f3253;
+$medium-blue:                 lighten($dark-blue, 40%);
+$light-blue:                  lighten($dark-blue, 65%);
+$navbar-inverse-bg:           $dark-blue;
+$navbar-inverse-link-color:   lighten($navbar-inverse-bg, 60%);
+$text-color:                  $dark-blue;

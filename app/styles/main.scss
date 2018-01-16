@@ -1,90 +1,390 @@
-// bower:scss
-// endbower
+@import 'custom-variables';
+@import '../../bower_components/bootstrap/scss/_functions.scss';
+@import '../../bower_components/bootstrap/scss/_variables.scss';
 
-.browserupgrade {
+.browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
 body {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: $medium-blue;
+}
+
+a {
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+#asak-navbar {
+  a {
+    font-size: 16px;
+  }
+
+  margin-bottom: 0px;
+
+  .navbar-brand {
+    font-size: 22px;
+    a {
+      font-size: 22px;
+    }
+  }
+
+  .navbar-toggle:hover {
+    background-color: lighten($navbar-inverse-bg, 35%);
+  }
+
+  .navbar-toggle {
+    background-color: lighten($navbar-inverse-bg, 15%);
+  }
+
+  .asak-social {
+    padding-top: 8px;
+    padding-left: 12px;
+  }
+}
+
+.asak-social {
+  &:hover {
+    color: $light-blue;
+  }
+}
+
+.asak-marketing {
+  .asak-marketing-charms {
+    text-align: center;
+    h2 {
+      margin-top: 36px;
+      margin-bottom: 36px;
+      line-height: 42px;
+      font-weight: 700;
+      font-size: 32px;
+    }
+    .asak-charm {
+      text-align: center;
+      margin-top: 50px;
+      max-width: 150px;
+      min-width: 50px;
+      .cert {
+      }
+      .purse {
+      }
+      .calendar {
+        width: 500px !important;
+      }
+    }
+    .asak-charm-lg {
+      max-width: 400px;
+      margin-top: 100px;
+    }
+  }
+  .disclaimers {
+    text-align: center;
+    line-height: 28px;
+  }
+}
+
+.purse {
+}
+.calendar img {
+  padding-top: 20px;
+}
+
+.page-container {
+  .page-content {
+    background-color: $light-blue;
+    min-width: 1000px;
+    margin-left: -20%; // probably not a good idea but seems to fix the content centering issue
+    margin-top: 30px;
+    margin-bottom: 42px;
+    border-radius: $border-radius-lg;
+    padding: 48px;
+    p {
+      font-size: 18px;
+      padding-top: 12px;
+    }
+    ul {
+      font-size: 18px;
+      padding-left: 100px;
+    }
+    li {
+      line-height: 36px;
+    }
+    h1,
+    h2,
+    h3 {
+      font-weight: 700;
+      padding-bottom: 12px;
+    }
+    h3 {
+      text-align: center;
+      line-height: 36px;
+      font-weight: bold;
+    }
+    img {
+      border-radius: $border-radius-lg;
+      margin-top: 18px;
+    }
+    .disclaimer {
+      font-weight: 700;
+      font-style: italic;
+      margin-left: 24px;
+      .title {
+        padding-left: 24px;
+      }
+    }
+    #about {
+      #qualifications {
+        padding-top: 18px;
+        padding-left: 100px;
+        li {
+          font-size: 22px;
+          line-height: 42px;
+          padding-bottom: 18px;
+        }
+      }
+    }
+    #contact {
+      h3 {
+        color: $dark-blue;
+      }
+      a {
+        color: $dark-blue;
+        &:hover {
+          color: lighten($dark-blue, 15%);
+        }
+      }
+      .contact-item {
+        padding-bottom: 42px;
+      }
+      .address {
+        margin-top: 36px;
+        padding: 12px;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: $border-radius-lg;
+      }
+      .map {
+        margin-top: 48px;
+        margin-bottom: 0px;
+        border-radius: $border-radius-lg;
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+      }
+      .map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+}
+
+.footer {
+  padding-top: 20px;
+  border-top: 1px solid darken($dark-blue, 15%);
+  background-color: $dark-blue;
+  padding-bottom: 12px;
+
+  p {
+    color: $light-blue;
+    text-align: center;
+  }
+
+  a:hover {
+    color: $light-blue;
+  }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Custom page header */
 .header {
-  padding-bottom: 1rem;
-  border-bottom: .05rem solid #e5e5e5;
-}
+  border-bottom: 1px solid #e5e5e5;
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 3rem;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 1.5rem;
-  color: #777;
-  border-top: .05rem solid #e5e5e5;
-}
-
-/* Customize container */
-@media (min-width: 48em) {
-  .container {
-    max-width: 46rem;
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
   }
 }
+
 .container-narrow > hr {
-  margin: 2rem 0;
+  margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  background-image: url('../images/bg-1.jpg');
+  height: 486px;
   text-align: center;
-  border-bottom: .05rem solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: .75rem 1.5rem;
-  font-size: 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+  .logo {
+    max-width: 600px;
+    margin-top: 40px;
+    border-style: none;
+    background: none;
+  }
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 3rem 0;
-}
-.marketing p + h4 {
-  margin-top: 1.5rem;
+  margin: 40px 0;
+  p + h4 {
+    margin-top: 28px;
+  }
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
   /* Remove the padding we set earlier */
   .header,
   .marketing,
   .footer {
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
   }
+
   /* Space out the masthead */
   .header {
-    margin-bottom: 2rem;
+    margin-bottom: 30px;
   }
+
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #asak-navbar {
+    .navbar-brand {
+      font-size: 18px !important;
+    }
+    li a {
+      font-size: 14px !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+    }
+    .asak-social {
+      font-size: 32px !important;
+      padding-top: 16px !important;
+    }
+  }
+  h2 {
+    line-height: 36px !important; // default 42px
+    font-size: 28px !important; // default 32px
+  }
+  .page-container {
+    .page-content {
+      min-width: 300px !important;
+      margin-left: 0px !important;
+    }
+  }
+  .asak-charm {
+    margin-top: 50px !important;
+    max-width: 100px !important;
+    min-width: 50px !important;
+  }
+  .asak-charm-lg {
+    max-width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #asak-navbar {
+    .asak-social {
+      padding-bottom: 12px;
+    }
+  }
+  .jumbotron {
+    .logo {
+      min-width: 300px;
+      max-width: 500px;
+      margin-top: 100px;
+    }
+  }
+  h2 {
+    line-height: 24px !important; // default 42px
+    font-size: 22px !important; // default 32px
+  }
+  .disclaimers {
+    h4 {
+      font-size: 12px;
+    }
+  }
+  .page-content {
+    margin-top: 0px !important;
+  }
+  .footer {
+    font-size: 12px;
+    .asak-social {
+      padding: 5px !important;
+    }
+  }
+  #b-photo {
+    width: 250px;
+  }
+  #qualifications {
+    padding-left: 24px !important;
+    li {
+      font-size: 18px !important;
+      line-height: 26px !important;
+    }
+  }
+  #contact {
+    font-size: 10px;
+    h3 {
+      font-size: 18px;
+    }
+    .address {
+      padding: 0px;
+      max-width: 300px;
+    }
+  }
+  #services {
+    p {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    ul {
+      font-size: 16px;
+      padding-left: 10px;
+    }
+    li {
+      line-height: 28px;
+      padding-bottom: 8px;
+    }
   }
 }
