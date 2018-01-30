@@ -171,6 +171,10 @@ gulp.task('serve:test', ['scripts'], () => {
   gulp.watch('test/spec/**/*.js', ['lint:test'])
 })
 
+gulp.task('favicon', () => {
+  return gulp.src('app/favicon.ico').pipe(gulp.dest('dist'))
+})
+
 // inject bower components
 gulp.task('wiredep', () => {
   gulp
@@ -189,7 +193,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app/views/layouts'))
 })
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'favicon'], () => {
   return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }))
 })
 
