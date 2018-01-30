@@ -33,12 +33,6 @@ gulp.task('styles', () => {
     .pipe(reload({ stream: true }))
 })
 
-gulp.task('bootstrap', () => {
-  return gulp
-    .src('bower_components/bootstrap/dist/js/bootstrap.min.js')
-    .pipe(gulp.dest('./tmp/scripts'))
-})
-
 gulp.task('scripts', () => {
   return gulp
     .src('app/scripts/**/*.js')
@@ -124,7 +118,7 @@ gulp.task('extras', () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']))
+gulp.task('clean', del.bind(null, ['dist']))
 
 gulp.task('serve', () => {
   runSequence(
@@ -206,7 +200,7 @@ gulp.task('wiredep', () => {
 
 gulp.task(
   'build',
-  ['lint', 'html', 'images', 'bootstrap', 'fonts', 'extras'],
+  ['lint', 'html', 'images', 'fonts'],
   () => {
     return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }))
   }
