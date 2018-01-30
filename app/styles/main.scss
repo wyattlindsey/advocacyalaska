@@ -1,6 +1,5 @@
 @import 'custom-variables';
-@import '../../bower_components/bootstrap/scss/_functions.scss';
-@import '../../bower_components/bootstrap/scss/_variables.scss';
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss';
 
 .browsehappy {
   margin: 0.2em 0;
@@ -107,7 +106,7 @@ a:hover {
     margin-left: -20%; // probably not a good idea but seems to fix the content centering issue
     margin-top: 30px;
     margin-bottom: 42px;
-    border-radius: $border-radius-lg;
+    border-radius: $border-radius-large;
     padding: 48px;
     p {
       font-size: 18px;
@@ -132,7 +131,7 @@ a:hover {
       font-weight: bold;
     }
     img {
-      border-radius: $border-radius-lg;
+      border-radius: $border-radius-large;
       margin-top: 18px;
     }
     .disclaimer {
@@ -173,12 +172,12 @@ a:hover {
         width: 400px;
         margin-left: auto;
         margin-right: auto;
-        border-radius: $border-radius-lg;
+        border-radius: $border-radius-large;
       }
       .map {
         margin-top: 48px;
         margin-bottom: 0px;
-        border-radius: $border-radius-lg;
+        border-radius: $border-radius-large;
         position: relative;
         padding-bottom: 75%; // This is the aspect ratio
         height: 0;

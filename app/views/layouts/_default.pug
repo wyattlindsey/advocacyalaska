@@ -15,30 +15,31 @@ html(lang="en")
       rel='stylesheet', type='text/css')
   body(class=page)
     nav.navbar.navbar-toggleable-sm.navbar-light.bg-faded#asak-navbar(role='navigation')
-      .navbar-header
-        button.navbar-toggler.navbar-toggler-left(data-toggle='collapse',
-                                                  data-target='#asak-navbar-collapse',
-                                                  type='button')
-          span.navbar-toggler-icon
-        a.navbar-brand(href='/') Advocacy Services of Alaska
+      .container-fluid
+        .navbar-header
+          button.navbar-toggler.navbar-toggler-left(data-toggle='collapse',
+                                                    data-target='#asak-navbar-collapse',
+                                                    type='button')
+            span.navbar-toggler-icon
+          a.navbar-brand(href='/') Advocacy Services of Alaska
 
-      .collapse.navbar-collapse#asak-navbar-collapse
-        ul.navbar-nav.mr-auto
-          li.nav-item.activce
-            a(href="/") Home
-          li.nav-item
-            a(href="/services.html") Services
-          li.nav-item
-            a(href="/pricing.html") Price List
-          li.nav-item
-            a(href="/about.html") About Us
-          li.nav-item
-            a(href="/contact.html") Contact
-        a.pull-right(href='https://www.facebook.com/pages/Advocacy-Services-of-Alaksa/150972734955130',
-                      target='_blank')
-            i.asak-social.fa.fa-3x.fa-facebook-square
-        a.pull-right(href='https://plus.google.com/113642899093359413634/about', target='_blank')
-            i.asak-social.fa.fa-3x.fa-google-plus-square
+        .collapse.navbar-collapse#asak-navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a(href="/") Home
+            li.nav-item
+              a(href="/services.html") Services
+            li.nav-item
+              a(href="/pricing.html") Price List
+            li.nav-item
+              a(href="/about.html") About Us
+            li.nav-item
+              a(href="/contact.html") Contact
+          a.pull-right(href='https://www.facebook.com/pages/Advocacy-Services-of-Alaksa/150972734955130',
+                        target='_blank')
+              i.asak-social.fa.fa-3x.fa-facebook-square
+          a.pull-right(href='https://plus.google.com/113642899093359413634/about', target='_blank')
+              i.asak-social.fa.fa-3x.fa-google-plus-square
 
     .jumbotron
       .container-fluid
@@ -59,7 +60,7 @@ html(lang="en")
         a(href='https://www.facebook.com/pages/Advocacy-Services-of-Alaksa/150972734955130',
                       target='_blank')
           i.asak-social.fa.fa-3x.fa-facebook-square
-      p Copyright @2014 Advocacy Services of Alaska, Inc. All rights reserved.
+      p Copyright @2018 Advocacy Services of Alaska, Inc. All rights reserved.
       p Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 
       script(
@@ -67,4 +68,3 @@ html(lang="en")
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=",
         crossorigin="anonymous")
       script(src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js")
-      script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn", crossorigin="anonymous")
