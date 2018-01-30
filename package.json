@@ -38,10 +38,16 @@
       "browser": true
     },
     "rules": {
-      "quotes": [2, "single"]
+      "quotes": [
+        2,
+        "single"
+      ]
     },
     "parserOptions": {
       "sourceType": "module"
     }
+  },
+  "dependencies": {
+    "harp": "^0.25.0"
   }
 }
