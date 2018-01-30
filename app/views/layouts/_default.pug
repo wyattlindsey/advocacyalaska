@@ -6,10 +6,11 @@ html(lang="en")
     meta(content='', name='description')
     meta(content='', name='author')
     meta(content='3 days', name='revisit-after')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
     // build:css /styles/main.css
     link(href='/styles/main.css', rel='stylesheet')
     // endbuild
-    link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
 
     link(href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,700italic,400italic',
       rel='stylesheet', type='text/css')
@@ -25,16 +26,16 @@ html(lang="en")
           a.navbar-brand(href='/') Advocacy Services of Alaska
 
         .collapse.navbar-collapse#asak-navbar-collapse
-          ul.navbar-nav.mr-auto
-            li.nav-item.active
+          ul.nav.navbar-nav
+            li
               a(href="/") Home
-            li.nav-item
+            li
               a(href="/services.html") Services
-            li.nav-item
+            li
               a(href="/pricing.html") Price List
-            li.nav-item
+            li
               a(href="/about.html") About Us
-            li.nav-item
+            li
               a(href="/contact.html") Contact
           a.pull-right(href='https://www.facebook.com/pages/Advocacy-Services-of-Alaksa/150972734955130',
                         target='_blank')
@@ -61,7 +62,11 @@ html(lang="en")
         a(href='https://www.facebook.com/pages/Advocacy-Services-of-Alaksa/150972734955130',
                       target='_blank')
           i.asak-social.fa.fa-3x.fa-facebook-square
-      p Copyright @2018 Advocacy Services of Alaska, Inc. All rights reserved.
+      p
+        span Copyright
+        script.
+          document.write('@' + new Date().getFullYear() + ' ')
+        span Advocacy Services of Alaska, Inc. All rights reserved.
       p Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> are licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 
       script(src="http://code.jquery.com/jquery-3.3.1.min.js"
