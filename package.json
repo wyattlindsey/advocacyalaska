@@ -46,5 +46,8 @@
     "parserOptions": {
       "sourceType": "module"
     }
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }
