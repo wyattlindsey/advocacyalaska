@@ -41,6 +41,7 @@ gulp.task('scripts', () => {
     .pipe($.babel())
     .pipe($.if(dev, $.sourcemaps.write('.')))
     .pipe(gulp.dest('.tmp/scripts'))
+    .pipe(gulp.dest('dist/scripts'))
     .pipe(reload({ stream: true }))
 })
 
@@ -108,14 +109,6 @@ gulp.task('fonts', () => {
       ) {}).concat('app/fonts/**/*')
     )
     .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')))
-})
-
-gulp.task('extras', () => {
-  return gulp
-    .src(['app/*', '!app/*.html', '!app/*.pug'], {
-      dot: true,
-    })
-    .pipe(gulp.dest('dist'))
 })
 
 gulp.task('clean', del.bind(null, ['dist']))
@@ -192,19 +185,13 @@ gulp.task('wiredep', () => {
 
   gulp
     .src('app/views/layouts/*.pug')
-    .pipe(
-      wiredep()
-    )
+    .pipe(wiredep())
     .pipe(gulp.dest('app/views/layouts'))
 })
 
-gulp.task(
-  'build',
-  ['lint', 'html', 'images', 'fonts'],
-  () => {
-    return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }))
-  }
-)
+gulp.task('build', ['lint', 'html', 'images', 'fonts'], () => {
+  return gulp.src('dist/**/*').pipe($.size({ title: 'build', gzip: true }))
+})
 
 gulp.task('default', () => {
   return new Promise(resolve => {
